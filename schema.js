@@ -8,7 +8,7 @@ type Game {
 
 type Review {
     id: ID!,
-    rating: int!,
+    rating: Int!,
     content: String!
 }
 
@@ -17,9 +17,9 @@ type Author {
     name:  String!,
     verified: Boolean!
 }
-//  this defines the entry point of the graph and specify the return types of these entry points
 type Query {
-    reviews: [Reviews]
+    reviews: [Review]
+    review(id: ID!):Review
     games: [Game]
     authors: [Author]
 }
